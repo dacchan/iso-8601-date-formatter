@@ -1,4 +1,4 @@
-/*ISO8601DateFormatter.m
+/*ISO8601_DateFormatter.m
  *
  *Created by Peter Hosey on 2009-04-11.
  *Copyright 2009–2016 Peter Hosey. All rights reserved.
@@ -9,7 +9,7 @@
 #if TARGET_OS_IPHONE
 #	import <UIKit/UIKit.h>
 #endif
-#import "ISO8601DateFormatter.h"
+#import "ISO8601_DateFormatter.h"
 
 #ifndef DEFAULT_TIME_SEPARATOR
 #	define DEFAULT_TIME_SEPARATOR ':'
@@ -29,7 +29,7 @@ const unichar ISO8601DefaultTimeSeparatorCharacter = DEFAULT_TIME_SEPARATOR;
 
 static NSString * const ISO8601TwoCharIntegerFormat = @"%.2d";
 
-@interface ISO8601DateFormatter(UnparsingPrivate)
+@interface ISO8601_DateFormatter(UnparsingPrivate)
 
 - (NSString *) replaceColonsInString:(NSString *)timeFormat withTimeSeparator:(unichar)timeSep;
 
@@ -40,7 +40,7 @@ static NSString * const ISO8601TwoCharIntegerFormat = @"%.2d";
 
 static NSCache *timeZonesByOffset;
 
-@implementation ISO8601DateFormatter
+@implementation ISO8601_DateFormatter
 
 + (void) initialize {
     timeZonesByOffset = [[NSCache alloc] init];
